@@ -1,8 +1,10 @@
 _Disclaimer: This is an AI generated codebase._
 
-# Permagen HTTP Server
+# `black-box-backend`
 
 A simple HTTP server built with Bun that provides endpoints for generating and retrieving permanent codes for text content.
+
+Used to save code for https://blackbox.hackclub.com
 
 Usage:
 
