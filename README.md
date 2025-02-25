@@ -1,6 +1,13 @@
+_Disclaimer: This is an AI generated codebase._
+
 # Permagen HTTP Server
 
 A simple HTTP server built with Bun that provides endpoints for generating and retrieving permanent codes for text content.
+
+Usage:
+
+- POST /permagen
+- GET /:permacode
 
 ## Features
 
