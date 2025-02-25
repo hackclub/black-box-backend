@@ -57,6 +57,8 @@ Returns the text content associated with the given color code.
 
 ## Setup and Running
 
+### Local Development
+
 1. Set up environment variables:
    Create a `.env` file with your PostgreSQL connection string:
    ```
@@ -79,4 +81,25 @@ Returns the text content associated with the given color code.
    bun dev
    ```
 
-The server will run on port 3000 by default, or you can set a custom port using the PORT environment variable. 
+The server will run on port 3000 by default, or you can set a custom port using the PORT environment variable.
+
+### Docker Deployment
+
+You can also run the application using Docker:
+
+1. Build the Docker image:
+   ```
+   docker build -t permagen-server .
+   ```
+
+2. Run the container:
+   ```
+   docker run -p 3000:3000 -e DATABASE_URL="postgres://username:password@hostname:port/database" permagen-server
+   ```
+
+   Note: When running in Docker, make sure the PostgreSQL server is accessible from the container. If you're running PostgreSQL locally, you might need to use the host network or specify the host IP instead of localhost.
+
+   For example, if your PostgreSQL is running on your host machine, you might need to use:
+   ```
+   docker run -p 3000:3000 -e DATABASE_URL="postgres://username:password@host.docker.internal:5432/database" permagen-server
+   ``` 
