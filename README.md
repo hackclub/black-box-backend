@@ -8,6 +8,7 @@ Used to save code for https://blackbox.hackclub.com
 
 Usage:
 
+- POST /compile
 - POST /permagen
 - GET /:permacode
 

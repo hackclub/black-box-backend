@@ -98,6 +98,11 @@ function generateColorCode() {
   return colorCode;
 }
 
+// Handle POST /compile
+async function handlePostCompile(req) {
+  // TODO
+}
+
 // Handle POST /permagen
 async function handlePostPermagen(req) {
   try {
@@ -261,7 +266,10 @@ const server = Bun.serve({
     }
     
     // Route handling
-    if (method === 'POST' && url.pathname === '/permagen') {
+    if (method === 'POST' && url.pathname === '/compile') {
+      // TODO
+    }
+    else if (method === 'POST' && url.pathname === '/permagen') {
       const response = await handlePostPermagen(req);
       // Add CORS headers to the response
       for (const [key, value] of Object.entries(corsHeaders)) {
